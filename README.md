@@ -179,3 +179,14 @@ HELLO-VIEW.FXML
     <Label fx:id="welcomeText"/>
     <Button text="Hello!" onAction="#onHelloButtonClick"/>
 </VBox>
+
+
+
+module com.example.demo1 {
+    requires javafx.controls;
+    requires javafx.fxml;
+
+MODULE-INFO.JAVA
+    opens com.example.demo1 to javafx.fxml;
+    exports com.example.demo1;
+}
